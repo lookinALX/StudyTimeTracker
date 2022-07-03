@@ -11,7 +11,7 @@ import javafx.util.Duration;
 
 public class Controller {
     private boolean flag = true;
-    private final MyTimer labelTimer = new MyTimer(0,0,5);
+    private final MyTimer labelTimer = new MyTimer(0,25,0);
 
     @FXML
     private Label timeLabel;
