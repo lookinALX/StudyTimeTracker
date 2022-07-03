@@ -36,11 +36,11 @@ public class Controller {
             timeline.setCycleCount(Timeline.INDEFINITE);
             timeline.play();
             flag = false;
-            endLabel.setText(labelTimer.getPastTime());
             startStopButton.setText("STOP");
         } else {
             timeline.stop();
             startStopButton.setText("START");
+            endLabel.setText(labelTimer.getPastTime());
             flag = true;
         }
     }

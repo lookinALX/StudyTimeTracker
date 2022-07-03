@@ -45,9 +45,15 @@ public class MyTimer {
 
     public String getPastTime(){
         String time;
+        int seconds;
         int hours = passedTime/3600;
-        int seconds = passedTime%3600;
         int minutes = (passedTime%3600)/60;
+
+        if(passedTime >= 60) {
+            seconds = passedTime%3600 - 61;
+        } else {
+            seconds = passedTime%3600-1;
+        }
 
         time = String.valueOf(hours) + ":" + String.valueOf(minutes) + ":" + String.valueOf(seconds);
 
@@ -65,7 +71,7 @@ public class MyTimer {
             second = 59;
         }if(-1 == minute){
             hour --;
-            minute = 0;
+            minute = 59;
         }
     }
 
